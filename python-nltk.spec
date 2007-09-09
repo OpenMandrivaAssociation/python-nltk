@@ -1,17 +1,17 @@
 %define origname	nltk
 
-Summary:		Natural Language Toolkit for Python
 Name:			python-%{origname}
 Version:		1.4.4
-Release:		%mkrel 3
+Release:		%mkrel 4
 Epoch:			0
+Summary:		Natural Language Toolkit for Python
 Group:			Development/Python
 Url:			http://nltk.sourceforge.net/
 Source0:		http://download.sourceforge.net/nltk/nltk-%{version}.tar.bz2
 License:		CPL
-BuildRoot:		%{_tmppath}/%{name}-buildroot
 BuildArch:		noarch
-BuildRequires:          python-devel
+BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
+%py_requires -d
 
 %description
 The Natural Langauge Toolkit is a Python package that simplifies the 
