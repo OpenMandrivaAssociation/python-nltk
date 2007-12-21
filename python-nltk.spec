@@ -10,6 +10,7 @@ Url:			http://nltk.sourceforge.net/
 Source0:		http://download.sourceforge.net/nltk/nltk-%{version}.tar.bz2
 License:		CPL
 BuildArch:		noarch
+BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
 %py_requires -d
 
 %description
