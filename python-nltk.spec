@@ -2,7 +2,7 @@
 
 Name:			python-%{origname}
 Version:		1.4.4
-Release:		%mkrel 8
+Release:		%mkrel 9
 Epoch:			0
 Summary:		Natural Language Toolkit for Python
 Group:			Development/Python
