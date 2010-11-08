@@ -11,7 +11,7 @@ Source0:		http://download.sourceforge.net/nltk/nltk-%{version}.tar.bz2
 License:		CPL
 BuildArch:		noarch
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
-%py_requires -d
+BuildRequires:		python
 
 %description
 The Natural Langauge Toolkit is a Python package that simplifies the 
@@ -32,6 +32,6 @@ standard interfaces between the different components of an NLP system.
 %clean
 %{__rm} -rf %{buildroot}
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
-
+%py_puresitedir/*
