@@ -1,37 +1,40 @@
-%define origname	nltk
+%define module	nltk
+%define name	python-%{module}
+%define version	2.0.1
+%define rel	rc1
+%define release %mkrel 0.%{rel}
 
-Name:			python-%{origname}
-Version:		1.4.4
-Release:		%mkrel 9
-Epoch:			0
-Summary:		Natural Language Toolkit for Python
-Group:			Development/Python
-Url:			http://nltk.sourceforge.net/
-Source0:		http://download.sourceforge.net/nltk/nltk-%{version}.tar.bz2
-License:		CPL
-BuildArch:		noarch
-BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
-BuildRequires:		python
+Summary:	Natural Language Toolkit for Python
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Epoch:		0
+License:	Apache License 2.0
+Group:		Development/Python
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}%{rel}-root
+Url:		http://www.nltk.org/
+Source0:	http://nltk.googlecode.com/files/%{module}-%{version}%{rel}.tar.gz
+BuildArch:	noarch
+Requires:	python-yaml >= 3.0.9
+Suggests:	python-numpy >= 1.5.1
+Suggests:	python-matplotlib >= 1.0.1
 
 %description
-The Natural Langauge Toolkit is a Python package that simplifies the 
-construction of programs that process natural language and defines 
-standard interfaces between the different components of an NLP system. 
+NLTK — the Natural Language Toolkit — is a suite of open source Python
+modules, data and documentation for research and development in
+natural language processing.
 
 %prep
-%setup -q -n %{origname}-%{version}
-
-%build
-%{__python} setup.py build
+%setup -q -n %{module}-%{version}%{rel}
 
 %install
 %{__rm} -rf %{buildroot}
 
-%{__python} setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot} --record=FILE_LIST
 
 %clean
 %{__rm} -rf %{buildroot}
 
-%files
+%files -f FILE_LIST
 %defattr(-,root,root)
 %py_puresitedir/*
