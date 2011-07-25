@@ -18,6 +18,7 @@ BuildArch:	noarch
 Requires:	python-yaml >= 3.0.9
 Suggests:	python-numpy >= 1.5.1
 Suggests:	python-matplotlib >= 1.0.1
+BuildRequires:	python-yaml >= 3.0.9
 
 %description
 NLTK — the Natural Language Toolkit — is a suite of open source Python
