@@ -2,7 +2,7 @@
 %define name	python-%{module}
 %define version	2.0.1
 %define rel	rc1
-%define release %mkrel 0.%{rel}
+%define release %mkrel 0.%{rel}.1
 
 Summary:	Natural Language Toolkit for Python
 Name:		%{name}
@@ -19,6 +19,7 @@ Requires:	python-yaml >= 3.0.9
 Suggests:	python-numpy >= 1.5.1
 Suggests:	python-matplotlib >= 1.0.1
 BuildRequires:	python-yaml >= 3.0.9
+BuildRequires:	python-devel
 
 %description
 NLTK — the Natural Language Toolkit — is a suite of open source Python
