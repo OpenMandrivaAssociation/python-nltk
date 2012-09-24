@@ -1,8 +1,7 @@
 %define module	nltk
 %define name	python-%{module}
-%define version	2.0.1
-%define rel	rc1
-%define release %mkrel 0.%{rel}.1
+%define version	2.0.3
+%define release 1
 
 Summary:	Natural Language Toolkit for Python
 Name:		%{name}
@@ -11,9 +10,9 @@ Release:	%{release}
 Epoch:		0
 License:	Apache License 2.0
 Group:		Development/Python
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}%{rel}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 Url:		http://www.nltk.org/
-Source0:	http://nltk.googlecode.com/files/%{module}-%{version}%{rel}.tar.gz
+Source0:	http://nltk.googlecode.com/files/%{module}-%{version}.tar.gz
 BuildArch:	noarch
 Requires:	python-yaml >= 3.0.9
 Suggests:	python-numpy >= 1.5.1
@@ -22,21 +21,21 @@ BuildRequires:	python-yaml >= 3.0.9
 BuildRequires:	python-devel
 
 %description
-NLTK — the Natural Language Toolkit — is a suite of open source Python
+NLTK - the Natural Language Toolkit - is a suite of open source Python
 modules, data and documentation for research and development in
 natural language processing.
 
 %prep
-%setup -q -n %{module}-%{version}%{rel}
+%setup -q -n %{module}-%{version}
 
 %install
 %{__rm} -rf %{buildroot}
 
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot} --record=FILE_LIST
+PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root=%{buildroot}
 
 %clean
 %{__rm} -rf %{buildroot}
 
-%files -f FILE_LIST
+%files
 %defattr(-,root,root)
-%py_puresitedir/*
+%py_puresitedir/%{module}*
