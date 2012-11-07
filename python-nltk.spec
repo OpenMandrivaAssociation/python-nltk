@@ -1,6 +1,6 @@
 %define module	nltk
 %define name	python-%{module}
-%define version	2.0.3
+%define version	2.0.4
 %define release 1
 
 Summary:	Natural Language Toolkit for Python
