@@ -3,13 +3,13 @@
 
 Summary:	Natural Language Toolkit for Python
 Name:		python-%{module}
-Version:	2.0.1
-Release:	0.%{rel}.1
+Version:	2.0.4
+Release:	1
 Epoch:		0
 License:	Apache License 2.0
 Group:		Development/Python
 Url:		http://www.nltk.org/
-Source0:	http://nltk.googlecode.com/files/%{module}-%{version}%{rel}.tar.gz
+Source0:	http://download.sourceforge.net/nltk/nltk-%{version}.tar.gz
 BuildArch:	noarch
 Requires:	python-yaml >= 3.0.9
 Suggests:	python-numpy >= 1.5.1
@@ -79,4 +79,5 @@ sed -i 's/.*egg-info$//' FILE_LIST
 
 * Sun Nov 06 2005 David Walluck <walluck@mandriva.org> 0:1.4.4-1mdk
 - release
+
 
