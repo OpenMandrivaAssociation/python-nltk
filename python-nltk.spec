@@ -3,7 +3,7 @@
 Summary:	Natural Language Toolkit for Python
 Name:		python-%{module}
 Version:	2.0.4
-Release:	1
+Release:	2
 Epoch:		0
 License:	Apache License 2.0
 Group:		Development/Python
@@ -18,7 +18,7 @@ BuildRequires:	python-devel
 BuildRequires:	python-distribute
 
 %description
-NLTK â€” the Natural Language Toolkit â€” is a suite of open source Python
+NLTK (the Natural Language Toolkit) is a suite of open source Python
 modules, data and documentation for research and development in
 natural language processing.
 
