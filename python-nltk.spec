@@ -3,7 +3,7 @@
 Summary:	Natural Language Toolkit for Python
 Name:		python-%{module}
 Version:	2.0.4
-Release:	2
+Release:	3
 Epoch:		0
 License:	Apache License 2.0
 Group:		Development/Python
