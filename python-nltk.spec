@@ -7,7 +7,7 @@ Release:	3
 Epoch:		0
 License:	Apache License 2.0
 Group:		Development/Python
-Url:		http://www.nltk.org/
+Url:		https://www.nltk.org/
 Source0:	http://download.sourceforge.net/nltk/nltk-%{version}.tar.gz
 BuildArch:	noarch
 Requires:	python-yaml >= 3.0.9
